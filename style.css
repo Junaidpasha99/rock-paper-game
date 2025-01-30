@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #8789C0;
+    text-align: center;
+}
+#btn1{
+    padding: 7vmin 8vmin; 
+    font-size: 2vmin; 
+    width: fit-content; 
+    margin: 2vmin auto; 
+    text-align: center; 
+    border-radius: 2vmin;
+}
+#btn2{
+    padding: 7vmin 8vmin; 
+    font-size: 2vmin; 
+    width: fit-content; 
+    margin: 6vmin; 
+    text-align: center; 
+    border-radius: 2vmin;
+}
+#btn3{
+    padding: 7vmin 8vmin;
+    font-size: 2vmin; 
+    width: fit-content; 
+    margin: 2vmin auto;
+    text-align: center; 
+    border-radius: 2vmin;
+}
+
+#btncontainer {
+    justify-content: center; /
+    
+
+    
+}
+#score{
+    padding: 7vmin 8vmin;
+    font-size: 3vmin;
+    width: fit-content;
+    text-align: center;
+    border-radius: 2vmin;
+    color: white;
+}
+#score2{
+    padding: 7vmin 8vmin;
+    font-size: 3vmin;
+    width: fit-content;
+    text-align: center;
+    border-radius: 2vmin;
+    color: white;
+}
+#main {
+    display: flex;
+    justify-content: center; /* Centers divs horizontally */
+    align-items: center; /* Aligns divs vertically */
+    gap: 10vmin; /* Adjust spacing between divs */
+    height: 10vh; /* Optional: Makes sure divs take full viewport height */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+#lastdiv{
+
+    padding-top: 23vmin;
+}
