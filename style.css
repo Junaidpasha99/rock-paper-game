@@ -6,7 +6,7 @@ body{
     background-color: #8789C0;
     text-align: center;
 }
-#btn1{
+.Button{
     padding: 7vmin 8vmin; 
     font-size: 2vmin; 
     width: fit-content; 
@@ -14,22 +14,7 @@ body{
     text-align: center; 
     border-radius: 2vmin;
 }
-#btn2{
-    padding: 7vmin 8vmin; 
-    font-size: 2vmin; 
-    width: fit-content; 
-    margin: 6vmin; 
-    text-align: center; 
-    border-radius: 2vmin;
-}
-#btn3{
-    padding: 7vmin 8vmin;
-    font-size: 2vmin; 
-    width: fit-content; 
-    margin: 2vmin auto;
-    text-align: center; 
-    border-radius: 2vmin;
-}
+
 
 #btncontainer {
     justify-content: center; /

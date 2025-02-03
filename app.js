@@ -1,67 +1,65 @@
-let btn1 = document.querySelector("#btn1")
-let btn2 = document.querySelector("#btn2")
-let btn3 = document.querySelector("#btn3")
+let btns = document.querySelectorAll(".Button")
 let displayWinner = document.querySelector("#display")
 
 let you = document.querySelector("#yousc")
 
-let winnngpat = [1, 2, 3]
+
 count = 0;
 count2 = 0;
 let comWinner = document.querySelector("#comsel")
 
-btn1.addEventListener("click", function () {
-    let btnck1 = 0
-    if(btnck1 == 0) {
-let pat = Math.floor(Math.random()*3)
-if(pat == 0){
-    
-    displayWinner.innerText = "Good You Are The Winner"
-    count++;
-    you.innerText = count
-    console.log("winner")
-}else{
-count2++
-comWinner.innerText = count2
-    displayWinner.innerText = "Computer Wins"
+
+const genComChoise = () =>{
+    const options = ["Rock", "Paper", "Sizor"]
+    const RandonIdx = Math.floor(Math.random()*3);
+return options [RandonIdx];
 }
-       
-    }
-});
+
+const playgame = (UserChoice) =>{
+console.log ("User choise is",UserChoice)
+const Computer = genComChoise();
 
 
-btn2.addEventListener("click", function () {
-    let btnck2 = 0
-    if(btnck2 == 0) {
-let pat = Math.floor(Math.random()*3)
-if(pat == 1){
-    displayWinner.innerText = "Good You Are The Winner"
-    count++;
-    you.innerText = count
-    console.log("winner")
-}else{
-count2++
-comWinner.innerText = count2
-    displayWinner.innerText = "Computer Wins"
+console.log("computer choice is",Computer)
+if(UserChoice == "Rock" && Computer == "Sizor" ){
+    displayWinner.innerText = "User win! Rock beats Scissors"
+    count2++
+    you.innerText = count2
 }
-       
-    }
-});
+else if(UserChoice == "Rock" && Computer == "Sizor"){
+    displayWinner.innerText = "Stone Beats Sizon You win"
+    }else if(UserChoice == "Sizor" && Computer == "Paper"){
+    displayWinner.innerText = "User win! Scissors beats Paper"
+count2++
+you.innerText = count2
 
-btn3.addEventListener("click", function () {
-    let btnck3 = 0
-    if(btnck3 == 0) {
-let pat = Math.floor(Math.random()*3)
-if(pat == 2){
-    displayWinner.innerText = "Good You Are The Winner"
-    count++;
-    you.innerText = count
-    console.log("winner")
+}else if (UserChoice == "Paper" && Computer == "Rock"){
+    displayWinner.innerText = "You win! Paper beats Rock"
+    count2++
+    you.innerText = count2
+}else if(UserChoice === Computer){
+    displayWinner.innerText = "DRAW"
+    console.log("DRAW")
+
 }else{
-count2++
-comWinner.innerText = count2
-    displayWinner.innerText = "Computer Wins"
+    displayWinner.innerText = "COMPUTER WINS"
+    console.log("COMPUTER WINS")
+    count++;
+    comWinner.innerText = count
 }
-       
-    }
-});
+
+
+}
+btns.forEach((Button)=>{
+    Button.addEventListener("click", ()=>{
+        const UserChoice = Button.getAttribute("id")
+playgame(UserChoice);
+
+
+    })
+})
+
+
+
+
+
